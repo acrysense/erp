@@ -1,0 +1,245 @@
+// VARIABLES SECTION
+$montserrat: 'Montserrat', sans-serif // Montserrat font-family
+$ledger: 'Ledger', serif // Ledger font-family
+$primary-font-size: 14px // Body font-size
+$primary-color: #000000 // Primary color
+$black-color: #111111 // Black color
+$white-color: #FFFFFF // White color
+$dark-white-color: #F0F0F0 // Dark white color
+$boulder-color: #454545 // Boulder color
+$gray-color: #B4B4B4 // Light gray color
+$light-grey-color: #E5E5E5 // Light grey color
+$dark-grey-color: #343434 // Dark grey color
+$asphalt-color: #797979 // Asphalt color
+$green-color: #33CC33 // Green color
+$bright-green-color: #12DC00 // Birght green color
+$green-hover-color: #2EBA2E // Green hover color
+$bright-red-color: #DA0000 // Bright red color
+$bg-grey: #F6F6F6
+
+// COMMON DOCUMENT STYLES
+body
+    position: relative
+    overflow-x: hidden
+    font-family: $montserrat
+    color: $primary-color
+    line-height: 1.2
+
+ul,
+ol,
+li
+    display: block
+    padding: 0
+    margin: 0
+    list-style: none
+
+h1, h2, h3, h4, h5, h6
+    margin: 0
+
+p
+    margin: 0
+
+a
+    display: inline-block
+    color: inherit
+    transition: all 0.4s
+    &:hover
+        color: inherit
+        text-decoration: none
+
+img
+    max-width: 100%
+
+svg path,
+    transition: fill 0.4s, stroke 0.4s
+
+// COMMON FOR PAGE ˆ
+.scroll-disabled
+    overflow: hidden
+
+.grey
+    background: $bg-grey
+
+.btn
+    display: block
+    padding: 10px
+    font-size: 10px
+    font-weight: 500
+    text-align: center
+    color: $white-color
+    background: $black-color
+    border: 1px solid transparent
+    transition: color 0.4s, background 0.4s, border 0.4s
+    &:hover
+        color: $black-color
+        background: transparent
+        border: 1px solid $black-color
+    &--border
+        color: $dark-grey-color
+        background: transparent
+        border: 1px solid $dark-grey-color
+        &:hover
+            color: $white-color
+            background: $dark-grey-color
+    &--lg
+        padding: 15px
+
+.input-group
+    position: relative
+    margin-top: 36px
+    &--placeholder
+        margin-top: 6px
+        .input-group__input
+            padding: 0 24px 8px 0
+            font-weight: normal
+            border-bottom: 1px solid $asphalt-color
+            &::-webkit-input-placeholder
+                opacity: 1
+            &::-moz-placeholder
+                opacity: 1
+    &__input
+        display: block
+        appearance: none
+        padding: 0 0 8px 0
+        width: 100%
+        font-size: 14px
+        font-weight: 500
+        color: $primary-color
+        background: transparent
+        border: 0
+        border-bottom: 1px solid $light-grey-color
+        border-radius: 0
+        transition: border 0.4s
+        &::-webkit-input-placeholder
+            opacity: 0
+        &::-moz-placeholder
+            opacity: 0
+        &:focus + label,
+        &:not(:placeholder-shown) + label
+            transform: translate(-10%, -22px) scale(0.8)
+            & > span
+                opacity: 0
+            & + .input-group__eye
+                opacity: 1
+        &:focus
+            outline: none
+            border-bottom: 1px solid $primary-color
+    &__textarea
+        display: block
+        appearance: none
+        resize: none
+        padding: 3px 10px
+        margin-top: -3px
+        width: 100%
+        min-height: 150px
+        font-size: 14px
+        font-weight: 500
+        color: $primary-color
+        background: transparent
+        border: 1px solid $light-grey-color
+        border-radius: 0
+        transition: border 0.4s
+        &::-webkit-input-placeholder
+            opacity: 0
+        &::-moz-placeholder
+            opacity: 0
+        &:focus + label,
+        &:not(:placeholder-shown) + label
+            transform: translate(-10%, -19px) scale(0.8)
+            & > span
+                opacity: 0
+        &:focus
+            outline: none
+            border: 1px solid $primary-color
+    &__textarea + &__label
+        &--active
+            transform: translate(-10%, -19px) scale(0.8)
+    &__label
+        position: absolute
+        top: 0
+        left: 0
+        margin: 0
+        font-size: 14px
+        font-weight: 500
+        color: $gray-color
+        cursor: text
+        transition: all 0.4s
+        span
+            transition: opacity 0.2s
+        &--active
+            transform: translate(-10%, -22px) scale(0.8)
+            color: $gray-color
+    &__icon
+        position: absolute
+        top: 0
+        right: 0
+        display: block
+        padding: 0
+        width: 14px
+        height: 14px
+        font-size: 0
+        background-color: transparent
+        background-image: url(../img/dist/sprite.svg#icon-input)
+        background-repeat: no-repeat
+        background-size: 100%
+        background-position: center right
+        border: 0
+        transition: opacity 0.4s
+
+.select
+    appearance: none
+    padding: 0 0 6px 0
+    width: 100%
+    font-size: 14px
+    font-weight: 500
+    color: $gray-color
+    background-color: transparent
+    background-image: url(../img/dist/sprite.svg#icon-caret-grey)
+    background-repeat: no-repeat
+    background-size: 9px
+    background-position: top 50% right 0
+    border: 0
+    border-bottom: 1px solid $light-grey-color
+    border-radius: 0
+    transition: border 0.4s
+    &.is-selected
+        color: $primary-color
+        background-image: url(../img/dist/sprite.svg#icon-caret)
+    &:focus
+        outline: none
+        border-bottom: 1px solid $primary-color
+
+.select[required]
+    &:valid
+        color: $primary-color
+
+.square-checkbox
+    display: flex
+    align-items: center
+    justify-content: space-between
+    width: 100%
+    margin: 0
+    cursor: pointer
+    &__input
+        display: none
+        &:checked 
+            & ~ .square-checkbox__icon
+                background-image: url(../img/dist/sprite.svg#icon-checkbox-mark)
+    &__icon
+        display: block
+        min-width: 14px
+        min-height: 14px
+        max-width: 14px
+        max-height: 14px
+        background-color: transparent
+        background-repeat: no-repeat
+        background-size: 10px
+        background-position: center center
+        border: 1px solid $primary-color
+    &__label
+        display: block
+        font-size: 12px
+        font-weight: 500
+        text-align: left
+        color: $primary-color
+        user-select: none
