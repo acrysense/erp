@@ -74,7 +74,7 @@
             <div class="clients-card__group">
                 <div class="clients-card__inner">
                     <span class="clients-card__value">Контакты</span>
-                    <button class="clients-card__change">
+                    <button class="clients-card__change modal-btn">
                         <span>Добавить</span>
                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M17.9025 8.00306H9.99702L9.99702 0.0976065H8.00298L8.00298 8.00306H0.0975257L0.0975258 9.9971L8.00298 9.9971V17.9026H9.99702V9.9971L17.9025 9.9971L17.9025 8.00306Z" fill="#2E3A59"/>
@@ -229,6 +229,50 @@
             </div>
         </div>
     </div>
+    <!-- Modal -->
+    <div class="modal">
+        <div class="modal__wrapper">
+            <h3 class="modal__title">Способ связи</h3>
+            <div class="modal__content">
+                <div class="input-group modal__input-group">
+                    <input type="text" class="input-group__input" id="input-mailing-address" placeholder="Почтовый адрес" required>
+                    <label for="input-mailing-address" class="input-group__label">Почтовый адрес</label>
+                </div>
+                <div class="input-group modal__input-group">
+                    <input type="text" class="input-group__input" id="input-vk" placeholder="Vk" required>
+                    <label for="input-vk" class="input-group__label">Vk</label>
+                </div>
+                <div class="input-group modal__input-group">
+                    <input type="text" class="input-group__input" id="input-phone-modal" placeholder="Телефон" required>
+                    <label for="input-phone-modal" class="input-group__label">Телефон</label>
+                </div>
+                <div class="input-group modal__input-group">
+                    <input type="text" class="input-group__input" id="input-instagram" placeholder="Instagram" required>
+                    <label for="input-instagram" class="input-group__label">Instagram</label>
+                </div>
+                <div class="input-group modal__input-group">
+                    <input type="text" class="input-group__input" id="input-more-phone-modal" placeholder="Доп. телефон" required>
+                    <label for="input-more-phone-modal" class="input-group__label">Доп. телефон</label>
+                </div>
+                <div class="input-group modal__input-group">
+                    <input type="text" class="input-group__input" id="input-facebook" placeholder="Facebook" required>
+                    <label for="input-facebook" class="input-group__label">Facebook</label>
+                </div>
+                <div class="modal__inner">
+                    <span class="modal__key">Добавить способ связи</span>
+                    <button class="modal__add">
+                        <span>Добавить</span>
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.9025 8.00306H9.99702L9.99702 0.0976065H8.00298L8.00298 8.00306H0.0975257L0.0975258 9.9971L8.00298 9.9971V17.9026H9.99702V9.9971L17.9025 9.9971L17.9025 8.00306Z" fill="#2E3A59"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <button class="modal__save-btn btn">Сохранить изменения</button>
+        </div>
+    </div>
+    <div class="modal-overlay"></div>
+    <!-- End of modal -->
     <!-- Scripts -->
     <script src="js/vendor.min.js"></script>
     <script src="js/app.min.js"></script>

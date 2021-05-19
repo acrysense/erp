@@ -217,8 +217,8 @@ svg path,
     display: flex
     align-items: center
     justify-content: space-between
-    width: 100%
     margin: 0
+    width: 100%
     cursor: pointer
     &__input
         display: none
@@ -242,4 +242,44 @@ svg path,
         font-weight: 500
         text-align: left
         color: $primary-color
+        user-select: none
+
+.size-checkbox
+    margin: 0
+    width: 100%
+    cursor: pointer
+    &__input
+        display: none
+        &:checked
+            & ~ .size-checkbox__group
+                background: #F6F6F6
+            & ~ .size-checkbox__group .size-checkbox__label
+                color: $primary-color
+            & ~ .size-checkbox__group .size-checkbox__icon
+                background-image: url(../img/dist/sprite.svg#icon-checkbox-circle-active)
+    &__group
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding: 15px
+        background: transparent
+        transition: background 0.2s
+    &__icon
+        display: block
+        min-width: 18px
+        min-height: 18px
+        max-width: 18px
+        max-height: 18px
+        background-color: transparent
+        background-image: url(../img/dist/sprite.svg#icon-checkbox-circle)
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center center
+    &__label
+        display: block
+        font-size: 18px
+        font-weight: 500
+        text-align: left
+        color: #666666
+        transition: color 0.2s
         user-select: none

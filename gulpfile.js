@@ -18,7 +18,6 @@ let paths = {
     },
     libs: {
         src:  [
-            'node_modules/swiper/swiper-bundle.min.js',
             'node_modules/inputmask/dist/inputmask.min.js',
         ],
         dest: baseDir + '/js',
