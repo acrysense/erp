@@ -1,0 +1,55 @@
+@media (min-width: 1440px)
+    .clients-card
+        &__column
+            max-width: 273px
+            width: 100%
+        &__column + &__column
+            margin-left: 14px    
+
+@media (max-width: 1439px)
+    .clients-card
+        &__wrapper
+            flex-wrap: wrap
+
+@media (min-width: 1024px) and (max-width: 1439px)
+    .clients-card
+        &__column
+            width: 50%
+            &:nth-child(2n)
+                margin-left: 14px
+                width: calc(50% - 14px)
+            &:nth-child(n + 3)
+                margin-top: 32px
+
+@media (max-width: 1199px)
+    .clients-card
+        &__wrapper--double
+            .clients-card__column
+                width: 100%
+            .clients-card__column + .clients-card__column
+                margin-top: 24px
+                margin-left: 0
+
+@media (max-width: 1023px)
+    .clients-card
+        &__column
+            width: 100%
+        &__column + &__column
+            margin-top: 32px
+
+@media (max-width: 991px)
+    .clients-card
+        &__blocks
+            flex-wrap: wrap
+        &__aside
+            margin-top: 24px
+            margin-left: 0
+            max-width: 100%
+
+@media (max-width: 767px)
+    .clients-card
+        flex-direction: column
+        &__sidebar
+            max-width: 100%
+        &__content
+            margin: 24px 0 0
