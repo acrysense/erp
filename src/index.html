@@ -183,7 +183,7 @@
                             </div>
                         </div>
                         <div class="input-group clients-card__input-group">
-                            <input type="text" class="input-group__input" id="input-date-of-issue" placeholder="Дата выдачи" required>
+                            <input type="text" class="input-group__input" id="input-date-of-issue" placeholder="Дата выдачи" data-inputmask="'mask': '99.99.9999'" required>
                             <label for="input-date-of-issue" class="input-group__label">Дата выдачи<span>*</span></label>
                         </div>
                         <div class="input-group clients-card__input-group">
@@ -247,17 +247,15 @@
                             <label class="input-group__label input-group__label--active">Узнали о магазине</label>
                         </div>
                         <div class="input-group">
-                            <select class="select" required>
-                                <option value="0" selected>Armani, adidas</option>
-                            </select>
-                            <label class="input-group__label input-group__label--active">Любимые бренды</label>
+                            <input type="text" class="input-group__input" id="input-like-brand" placeholder="Любимые бренды" value="Armani, adidas" required>
+                            <label for="input-like-brand" class="input-group__label">Любимые бренды</label>
                         </div>
-                        <div class="input-group clients-card__input-group">
-                            <input type="email" class="input-group__input" id="input-clothing-size" placeholder="Размер одежды" required>
+                        <div class="input-group clients-card__input-group modal-material-btn">
+                            <input type="text" class="input-group__input" id="input-clothing-size" placeholder="Размер одежды" required disabled>
                             <label for="input-clothing-size" class="input-group__label">Размер одежды</label>
                         </div>
-                        <div class="input-group clients-card__input-group">
-                            <input type="email" class="input-group__input" id="input-shoe-size" placeholder="Размер обуви" required>
+                        <div class="input-group clients-card__input-group modal-material-btn">
+                            <input type="text" class="input-group__input" id="input-shoe-size" placeholder="Размер обуви" required disabled>
                             <label for="input-shoe-size" class="input-group__label">Размер обуви</label>
                         </div>
                         <div class="input-group">
@@ -356,9 +354,10 @@
                         </li>
                     </ul>
                 </div>
+                <button class="modal-material__btn">Применить <span>3 размера</span></button>
             </div>
             <div class="modal-material__content">
-                <div class="modal-material__column">
+                <div class="modal-material__column modal-material__column--hidden">
                     <h3 class="modal-material__title modal-material__title--shoe">Размер обуви</h3>
                     <ul class="modal-material__list">
                         <li class="modal-material__item">
@@ -462,7 +461,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="modal-material__column">
+                <div class="modal-material__column modal-material__column--hidden">
                     <h3 class="modal-material__title modal-material__title--clothing">Размер одежды</h3>
                     <ul class="modal-material__list">
                         <li class="modal-material__item">
@@ -565,9 +564,8 @@
                             </label>
                         </li>
                     </ul>
-                </div>
+                 </div>
             </div>
-            <button class="modal-material__btn">Применить <span>3 размера</span></button>
         </div>
     </div>
     <!-- End of modal material -->

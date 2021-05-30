@@ -160,6 +160,7 @@
         margin-top: 10px
     &__btn
         position: absolute
+        left: 0
         bottom: 0
         display: block
         padding: 25px
@@ -172,3 +173,103 @@
         span
             font-weight: bold
             text-decoration: underline
+
+// MEDIA QUARIES
+@media (max-width: 767px)
+    .modal
+        left: 0
+        right: 0
+        transform: translateY(-50%)
+        &__wrapper
+            width: 100%
+        &__content
+            .modal__inner,
+            .input-group
+                width: 100%
+                &:nth-child(2n)
+                    width: 100%
+                    margin-left: 0
+    .modal-material
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        transform: none
+        &__wrapper
+            overflow-y: scroll
+            overflow-x: hidden
+            width: 100%
+            height: 100%
+            height: calc(var(--vh, 1vh) * 100)
+        &__subtitle
+            max-width: 60%
+        &__content
+            display: block
+            overflow: visible
+        &__inner--padding
+            padding: 0
+        &__inner + &__inner
+            margin-top: 15px
+        &__btn
+            position: static
+        &__title
+            display: flex
+            align-items: center
+            padding: 15px 0
+            width: 100%
+            font-size: 18px
+            font-weight: 500
+            text-align: left
+            &::before
+                display: block
+                margin-right: 15px
+                max-width: 18px
+                max-height: 18px
+                min-width: 18px
+                min-height: 18px
+                width: 18px
+                height: 18px
+            &::after
+                content: ''
+                display: block
+                margin-left: auto
+                width: 32px
+                height: 32px
+                vertical-align: middle
+                background-color: $bg-grey
+                background-image: url(../img/dist/sprite.svg#icon-close-2)
+                background-repeat: no-repeat
+                background-size: 12px
+                background-position: center center
+        &__column
+            padding: 0 15px
+            &--hidden
+                background: $bg-grey
+                .modal-material__title
+                    &::after
+                        background-color: $white-color
+                        background-image: url(../img/dist/sprite.svg#icon-right-menu)
+                .modal-material__list
+                    display: none
+        &__column +  &__column
+            margin-top: 15px
+
+@media (min-width: 576px) and (max-width: 767px)
+    .modal-material
+        &__btn
+            margin: 0 -25px -25px
+            width: calc(100% + 50px)
+
+@media (max-width: 575px)
+    .modal
+        &__wrapper
+            padding: 25px 30px 30px
+    .modal-material
+        &__top
+            padding: 15px
+        &__btn
+            padding: 15px
+            margin: 0 -15px -15px
+            width: calc(100% + 30px)
+        &__list
+            margin-top: 15px

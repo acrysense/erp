@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/vendor.min.css">
     <link rel="stylesheet" href="css/app.min.css">
 </head>
-<body class="grey">
+<body class="grey scroll-disabled">
     <!-- Modal material -->
     <div class="modal-material modal-material--active">
         <div class="modal-material__wrapper">
@@ -42,9 +42,10 @@
                         </li>
                     </ul>
                 </div>
+                <button class="modal-material__btn">Применить <span>3 размера</span></button>
             </div>
             <div class="modal-material__content">
-                <div class="modal-material__column">
+                <div class="modal-material__column modal-material__column--hidden">
                     <h3 class="modal-material__title modal-material__title--shoe">Размер обуви</h3>
                     <ul class="modal-material__list">
                         <li class="modal-material__item">
@@ -148,7 +149,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="modal-material__column">
+                <div class="modal-material__column modal-material__column--hidden">
                     <h3 class="modal-material__title modal-material__title--clothing">Размер одежды</h3>
                     <ul class="modal-material__list">
                         <li class="modal-material__item">
@@ -251,9 +252,8 @@
                             </label>
                         </li>
                     </ul>
-                </div>
+                 </div>
             </div>
-            <button class="modal-material__btn">Применить <span>3 размера</span></button>
         </div>
     </div>
     <!-- End of modal material -->
